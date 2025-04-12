@@ -20,18 +20,19 @@
             <!-- Phần tiêu đề danh mục sản phẩm -->
             <div class="col-12 mb-3">
                 <h5 class="home-filter_label">SẢN PHẨM NỔI BẬT</h5>
-                <div class="btn-group" role="group" aria-label="Phone brands">
-                    <button type="button" class="btn btn-outline-primary">Iphone</button>
-                    <button type="button" class="btn btn-outline-primary">Samsung</button>
-                    <button type="button" class="btn btn-outline-primary">Xiaomi</button>
-                    <button type="button" class="btn btn-outline-primary">Realme</button>
-                    <button type="button" class="btn btn-outline-primary">Oppo</button>
-                    <button type="button" class="btn btn-outline-primary">Vivo</button>
-                    <button type="button" class="btn btn-outline-primary">Nokia</button>
-                    <button type="button" class="btn btn-outline-primary">Asus</button>
-                    <button type="button" class="btn btn-primary">Xem tất cả</button>
+                <div class="btn-group" role="group" aria-label="Product brands">
+                    <button th:each="c : ${categories}"
+                            type="button"
+                            class="btn btn-outline-primary"
+                            th:onclick="|window.location.href='/products?category_id=${c.id}'|">
+                        [[${c.category_name}]]
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='/products'">
+                        Xem tất cả
+                    </button>
                 </div>
             </div>
+
 
             <!-- Phần sản phẩm -->
             <!-- Sản phẩm 1 -->

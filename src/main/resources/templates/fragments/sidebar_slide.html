@@ -11,7 +11,7 @@
                 </h3>
                 <ul class="navbar-nav flex-column w-100" href="/products" th:each="c:${categories}">
                     <li class="nav-item active">
-                        <a th:href="@{'/products?category=' + ${c.id}}" class="nav-link d-flex align-items-center">
+                        <a th:href="@{'/products?category_id=' + ${c.id}}" class="nav-link d-flex align-items-center">
                             <!--<i class="fa-solid fa-mobile-screen-button me-2"></i>-->
                             [[${c.category_name}]]
                         </a>
