@@ -154,5 +154,8 @@ public class HomeController {
         return "detail_product";
     }
 
-
+    @GetMapping("/chatbot")
+    public String chatbot() {
+        return "chatbot";
+    }
 }
